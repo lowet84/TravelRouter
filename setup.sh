@@ -18,6 +18,6 @@ iptables -A FORWARD -i $WLAN -o eth0 -j ACCEPT
 service isc-dhcp-server start
 hostapd -B /etc/hostapd/hostapd.conf
 sh -c "iptables-save > /etc/iptables.ipv4.nat"
-echo "up iptables-restore < /etc/iptables.ipv4.nat" >> /etc/network/interfaces
+#echo "up iptables-restore < /etc/iptables.ipv4.nat" >> /etc/network/interfaces
 wget https://raw.githubusercontent.com/lowet84/TravelRouter/master/rc.local -O /etc/rc.local 
 reboot
