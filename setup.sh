@@ -7,7 +7,7 @@ cd RTL8188-hostapd-2.0/hostapd/
 make && make install
 wget https://raw.githubusercontent.com/lowet84/TravelRouter/master/dhcpd.conf -O /etc/dhcp/dhcpd.conf
 echo "INTERFACES=\"$WLAN\"" > /etc/default/isc-dhcp-server
-wget https://raw.githubusercontent.com/lowet84/TravelRouter/master/$WLAN -O /etc/network/interfaces.d/$WLAN
+wget https://raw.githubusercontent.com/lowet84/TravelRouter/master/wlan0 -O /etc/network/interfaces.d/$WLAN
 wget https://raw.githubusercontent.com/lowet84/TravelRouter/master/hostapd.conf -O /etc/hostapd/hostapd.conf
 echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
 sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward"
