@@ -19,5 +19,6 @@ service isc-dhcp-server start
 hostapd -B /etc/hostapd/hostapd.conf
 sh -c "iptables-save > /etc/iptables.ipv4.nat"
 #echo "up iptables-restore < /etc/iptables.ipv4.nat" >> /etc/network/interfaces
+update-rc.d isc-dhcp-server enable
 wget https://raw.githubusercontent.com/lowet84/TravelRouter/master/rc.local -O /etc/rc.local 
 reboot
